@@ -1,1 +1,17 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --page-font: "Inter", sans-serif;
+  --accent-font: "PressStart2P", fantasy;
+  --page-font-weight: 410;
+  --heading-font-weight: 715;
+  --page-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  --page-bg:
+    repeating-linear-gradient(90deg, rgb(211 211 211 / 1) 0 2px, rgb(211 211 211 / 0) 2px 4px),
+    repeating-linear-gradient(180deg, rgb(211 211 211 / 1) 0 2px, rgb(211 211 211 / 0) 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+  --surface: #fff;
+  --ink: #000;
+  --label-ink: #fff;
+  --shadow-ink: rgb(0 0 0 / 0.25);
+  --danger: #ff0000;
+  --dialog-mask: rgb(0 0 0 / 0.75);
+}

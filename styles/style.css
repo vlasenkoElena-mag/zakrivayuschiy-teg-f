@@ -1,16 +1,324 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--page-font), sans-serif;
+  font-variation-settings: "wght" var(--page-font-weight);
+  color: var(--ink);
+  background-color: #e7e7e7;
+  background-image: var(--page-bg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-block {
+  margin-block-start: 100px;
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  padding-block: clamp(7.75rem, 7.48rem + 1.1vw, 8.5rem);
+  border: 2px solid var(--ink);
+  background-color: var(--surface);
+}
+
+.hero-block__mark {
+  margin: 0;
+  font-family: var(--accent-font), fantasy;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.hero-block__caption {
+  margin: 0;
+  font-family: var(--accent-font), fantasy;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.page-frame {
+  inline-size: var(--page-width);
+}
+
+.entry-list {
+  margin-block-start: 96px;
+  display: grid;
+  gap: 50px;
+}
+
+.entry-list__item {
+  margin: 0;
+}
+
+.memory-card {
+  border: 2px solid var(--ink);
+  background-color: var(--surface);
+}
+
+.memory-card__title {
+  margin: 4px 10px;
+  font-size: 18px;
+  line-height: 1.17;
+  font-variation-settings: "wght" var(--heading-font-weight);
+}
+
+.memory-card__media {
+  position: relative;
+  border-block: 2px solid var(--ink);
+}
+
+.memory-card__photo {
+  display: block;
+  inline-size: 100%;
+  block-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  object-fit: cover;
+  object-position: center;
+}
+
+.filter-soft {
+  filter: grayscale(0.8);
+}
+
+.filter-vivid {
+  filter: saturate(500%);
+}
+
+.filter-shift {
+  filter: hue-rotate(40deg);
+}
+
+.filter-negative {
+  filter: invert(0.7);
+}
+
+.filter-warm {
+  filter: sepia(80%);
+}
+
+.filter-blur {
+  filter: blur(0.2rem);
+}
+
+.filter-mixed {
+  filter: hue-rotate(90deg) saturate(500%) opacity(70%) grayscale(0.8);
+}
+
+.filter-contrast {
+  filter: contrast(1.3);
+}
+
+.memory-card__label {
+  position: absolute;
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  z-index: 1;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  -webkit-text-stroke: 1px var(--label-ink);
+  text-shadow: 1px 0 0 var(--label-ink), -1px 0 0 var(--label-ink), 0 1px 0 var(--label-ink), 0 -1px 0 var(--label-ink);
+}
+
+@supports ((-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff)) {
+  .memory-card__label {
+    text-shadow: none;
+  }
+}
+
+.memory-card__text {
+  margin: 22px 25px 0;
+  font-size: 18px;
+  line-height: 1.17;
+}
+
+.memory-card__memo {
+  margin: 25px 25px 0;
+  font-size: 18px;
+  line-height: 1.17;
+}
+
+.like-icon {
+  inline-size: 39px;
+  block-size: 36px;
+}
+
+.contour {
+  fill: var(--ink);
+  transition: fill 0.1s linear;
+}
+
+.main-body,
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:hover .core,
+.card__icon-button:focus-visible .core,
+.card__icon-button:hover .main-body,
+.card__icon-button:focus-visible .main-body {
+  fill: var(--ink);
+}
+
+.card__icon-button:active .core,
+.card__icon-button:active .main-body {
+  fill: var(--danger);
+}
+
+.like-icon.is-liked {
+  animation: heart-pop 0.3s 0.1s ease-in;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--danger);
+  transition-delay: 0.06s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--danger);
+  transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--danger);
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.like-icon.is-liked .sparks {
+  animation: spark-fade 0.3s 0.3s ease-in forwards;
+}
+
+.memory-card__controls {
+  margin: 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 7px;
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: 2px solid var(--ink);
+  background-color: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--ink);
+  color: var(--surface);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--shadow-ink);
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  font-family: var(--accent-font), fantasy;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+}
+
+.button__icon {
+  position: relative;
+  z-index: 1;
+  fill: currentColor;
+  mix-blend-mode: difference;
+}
+
+.card__icon-button {
+  inline-size: 39px;
+  block-size: 36px;
+  padding: 0;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.card__like-button {
+  inline-size: 130px;
+  min-block-size: 38px;
+}
+
+.vault-button__icon,
+.vault-dialog__icon {
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+.vault-button {
+  margin-block: 50px 103px;
+  margin-inline: auto;
+  min-block-size: 55px;
+  padding-inline: 19px 21px;
+}
+
+.vault-dialog {
+  inline-size: var(--page-width);
+  padding: 0;
+  border: 2px solid var(--ink);
+}
+
+.vault-dialog::backdrop {
+  background-color: var(--dialog-mask);
+}
+
+.vault-dialog__panel {
+  padding: 30px;
+  background-color: var(--surface);
+}
+
+.vault-dialog__row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.vault-dialog__text {
+  font-family: var(--accent-font), fantasy;
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.vault-dialog__form {
+  margin-block-start: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.vault-dialog__button {
+  min-inline-size: 257px;
+  min-block-size: 38px;
 }
