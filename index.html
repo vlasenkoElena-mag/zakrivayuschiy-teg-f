@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Проектная работа «Закрывающий тег»" />
     <title>Закрывающий тег</title>
+    <link rel="icon" href="./images/site-icon.ico" sizes="any" />
+    <link rel="icon" href="./svg/site-icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/site-touch.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -11,8 +16,238 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header"></header>
-    <main></main>
+    <header class="hero-block page-frame">
+      <h1 class="hero-block__mark">&lt;/HTML&gt;</h1>
+      <p class="hero-block__caption">Закрывающий тег</p>
+    </header>
+
+    <main class="page-frame">
+      <ul class="entry-list">
+        <li class="entry-list__item">
+          <article class="memory-card">
+            <h2 class="memory-card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+            <div class="memory-card__media">
+              <img class="memory-card__photo filter-soft" src="./images/van-night-large.png" alt="фургон на ночной стоянке" loading="lazy" />
+              <span class="memory-card__label" aria-hidden="true">start</span>
+            </div>
+            <p class="memory-card__text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на будущее.</p>
+            <p class="memory-card__memo">Место для ваших воспоминаний о начале обучения.</p>
+            <div class="memory-card__controls">
+              <button class="card__icon-button button" type="button" aria-label="Лайкнуть карточку">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <g>
+                    <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+                    <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+                    <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+                  </g>
+                  <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            </div>
+          </article>
+        </li>
+
+        <li class="entry-list__item">
+          <article class="memory-card">
+            <h2 class="memory-card__title">1 спринт: Я — чистый лист</h2>
+            <div class="memory-card__media">
+              <img class="memory-card__photo filter-vivid" src="./images/van-night-small.png" alt="фургон на ночной стоянке" loading="lazy" />
+              <span class="memory-card__label" aria-hidden="true">blank</span>
+            </div>
+            <p class="memory-card__text">На первых этапах мы работали со страхами и сомнениями, которые часто испытывают новички. Один из них — страх перед чистым листом.</p>
+            <p class="memory-card__memo">Место для ваших воспоминаний о начале первого спринта.</p>
+            <div class="memory-card__controls">
+              <button class="card__icon-button button" type="button" aria-label="Лайкнуть карточку">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <g>
+                    <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+                    <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+                    <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+                  </g>
+                  <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            </div>
+          </article>
+        </li>
+
+        <li class="entry-list__item">
+          <article class="memory-card">
+            <h2 class="memory-card__title">1 спринт: А если не получится?</h2>
+            <div class="memory-card__media">
+              <img class="memory-card__photo filter-shift" src="./images/van-night-large.png" alt="фургон на ночной стоянке" loading="lazy" />
+              <span class="memory-card__label" aria-hidden="true">try</span>
+            </div>
+            <p class="memory-card__text">Первый проект — позади. Это ещё самое начало пути, но уже есть опыт, который помогает не пугаться сложных задач.</p>
+            <p class="memory-card__memo">Место для ваших воспоминаний об окончании первого спринта.</p>
+            <div class="memory-card__controls">
+              <button class="card__icon-button button" type="button" aria-label="Лайкнуть карточку">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <g>
+                    <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+                    <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+                    <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+                  </g>
+                  <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            </div>
+          </article>
+        </li>
+
+        <li class="entry-list__item">
+          <article class="memory-card">
+            <h2 class="memory-card__title">2 спринт: Погоня за идеалом</h2>
+            <div class="memory-card__media">
+              <img class="memory-card__photo filter-negative" src="./images/van-night-small.png" alt="фургон на ночной стоянке" loading="lazy" />
+              <span class="memory-card__label" aria-hidden="true">shift</span>
+            </div>
+            <p class="memory-card__text">На этом этапе уже понятно, как много ещё впереди. Иногда стремление к идеалу мешает двигаться дальше, и важно разрешить себе делать просто хорошо.</p>
+            <p class="memory-card__memo">Место для ваших воспоминаний о начале второго спринта.</p>
+            <div class="memory-card__controls">
+              <button class="card__icon-button button" type="button" aria-label="Лайкнуть карточку">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <g>
+                    <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+                    <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+                    <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+                  </g>
+                  <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            </div>
+          </article>
+        </li>
+
+        <li class="entry-list__item">
+          <article class="memory-card">
+            <h2 class="memory-card__title">2 спринт: О тех, кто рядом</h2>
+            <div class="memory-card__media">
+              <img class="memory-card__photo filter-warm" src="./images/van-night-large.png" alt="фургон на ночной стоянке" loading="lazy" />
+              <span class="memory-card__label" aria-hidden="true">team</span>
+            </div>
+            <p class="memory-card__text">Всё это время вы были не одиноки. Вас окружали одногруппники, команда сопровождения и люди, которым можно пожаловаться, когда очередной макет не поддавался.</p>
+            <p class="memory-card__memo">Место для ваших воспоминаний об окончании второго спринта.</p>
+            <div class="memory-card__controls">
+              <button class="card__icon-button button" type="button" aria-label="Лайкнуть карточку">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <g>
+                    <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+                    <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+                    <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+                  </g>
+                  <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            </div>
+          </article>
+        </li>
+
+        <li class="entry-list__item">
+          <article class="memory-card">
+            <h2 class="memory-card__title">3 спринт: Обходные стратегии</h2>
+            <div class="memory-card__media">
+              <img class="memory-card__photo filter-blur" src="./images/van-night-small.png" alt="фургон на ночной стоянке" loading="lazy" />
+              <span class="memory-card__label" aria-hidden="true">route</span>
+            </div>
+            <p class="memory-card__text">На этом курсе вы постоянно решали разные задачи. Когда решения заканчивались, приходилось смотреть на задачу под другим углом.</p>
+            <p class="memory-card__memo">Место для ваших воспоминаний о начале третьего спринта.</p>
+            <div class="memory-card__controls">
+              <button class="card__icon-button button" type="button" aria-label="Лайкнуть карточку">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <g>
+                    <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+                    <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+                    <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+                  </g>
+                  <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            </div>
+          </article>
+        </li>
+
+        <li class="entry-list__item">
+          <article class="memory-card">
+            <h2 class="memory-card__title">3 спринт: Когда опускаются руки</h2>
+            <div class="memory-card__media">
+              <img class="memory-card__photo filter-contrast" src="./images/van-night-large.png" alt="фургон на ночной стоянке" loading="lazy" />
+              <span class="memory-card__label" aria-hidden="true">focus</span>
+            </div>
+            <p class="memory-card__text">Во время учёбы часто возникает чувство, когда не знаешь, за что хвататься. В такие моменты очень нужна концентрация.</p>
+            <p class="memory-card__memo">Место для ваших воспоминаний об окончании третьего спринта.</p>
+            <div class="memory-card__controls">
+              <button class="card__icon-button button" type="button" aria-label="Лайкнуть карточку">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <g>
+                    <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+                    <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+                    <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+                  </g>
+                  <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            </div>
+          </article>
+        </li>
+
+        <li class="entry-list__item">
+          <article class="memory-card">
+            <h2 class="memory-card__title">«Сейчас я здесь»</h2>
+            <div class="memory-card__media">
+              <img class="memory-card__photo filter-mixed" src="./images/van-night-small.png" alt="фургон на ночной стоянке" loading="lazy" />
+              <span class="memory-card__label" aria-hidden="true">balance</span>
+            </div>
+            <p class="memory-card__text">Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Вёрстка — это целый мир, который постоянно меняется.</p>
+            <p class="memory-card__memo">Место, чтобы остановиться, подумать и написать, что вы чувствуете в этой точке пути.</p>
+            <div class="memory-card__controls">
+              <button class="card__icon-button button" type="button" aria-label="Лайкнуть карточку">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <g>
+                    <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+                    <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+                    <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+                  </g>
+                  <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button"><span class="button__text">Like</span></button>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </main>
+
+    <button class="vault-button page-frame button" type="button" onclick="document.getElementById('save-dialog').showModal()">
+      <svg class="button__icon vault-button__icon" viewBox="0 0 39 39" aria-hidden="true">
+        <use href="./svg/floppy-symbol.svg#floppy"></use>
+      </svg>
+      <span class="button__text">Сохранить на память</span>
+    </button>
+
+    <dialog class="vault-dialog page-frame" id="save-dialog">
+      <div class="vault-dialog__panel">
+        <div class="vault-dialog__row">
+          <svg class="button__icon vault-dialog__icon" viewBox="0 0 39 39" aria-hidden="true">
+            <use href="./svg/floppy-symbol.svg#floppy"></use>
+          </svg>
+          <p class="vault-dialog__text">Вставьте дискету, чтобы продолжить</p>
+        </div>
+        <form class="vault-dialog__form" method="dialog">
+          <button class="vault-dialog__button button" type="submit">
+            <span class="button__text">ОК</span>
+          </button>
+        </form>
+      </div>
+    </dialog>
+
     <script src="./scripts/like.js"></script>
   </body>
 </html>
