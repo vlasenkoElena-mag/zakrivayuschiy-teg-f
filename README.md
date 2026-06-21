@@ -4,7 +4,7 @@
 
 ## Репозиторий
 
-- [zakrivayuschiy-teg-f](https://github.com/vlasenkoElena-mag/zakrivayuschiy-teg-f)
+(https://github.com/vlasenkoElena-mag/zakrivayuschiy-teg-f)
 
 ## Что есть в проекте
 
