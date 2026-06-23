@@ -223,14 +223,13 @@
           </article>
         </li>
       </ul>
+      <button class="vault-button page-frame button" type="button" onclick="document.getElementById('save-dialog').showModal()">
+        <svg class="button__icon vault-button__icon" viewBox="0 0 39 39" aria-hidden="true">
+          <use href="./svg/floppy-symbol.svg#floppy"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
     </main>
-
-    <button class="vault-button page-frame button" type="button" onclick="document.getElementById('save-dialog').showModal()">
-      <svg class="button__icon vault-button__icon" viewBox="0 0 39 39" aria-hidden="true">
-        <use href="./svg/floppy-symbol.svg#floppy"></use>
-      </svg>
-      <span class="button__text">Сохранить на память</span>
-    </button>
 
     <dialog class="vault-dialog page-frame" id="save-dialog">
       <div class="vault-dialog__panel">
