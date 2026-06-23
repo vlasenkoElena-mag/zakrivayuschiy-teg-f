@@ -118,7 +118,8 @@
   inset-block-start: 25px;
   inset-inline-end: 25px;
   z-index: 1;
-  color: #fff;
+  color: black;
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   line-height: 1;
   letter-spacing: 0;
@@ -223,42 +224,66 @@
   overflow: hidden;
   transition:
     color 0.3s ease,
-    background-color 0.3s ease,
     box-shadow 0.3s ease;
 }
 
-.button:hover,
-.button:focus-visible {
-  background-color: var(--ink);
-  color: var(--surface);
-}
+.button::before { 
+  content: ''; 
+  position: absolute; 
+  inset: 0; 
+  background-color: var(--ink); 
+  transform: translateX(-100%); 
+  transition: transform 0.3s ease; 
+  z-index: 0; 
+} 
+
+.button:hover::before { 
+  transform: translateX(0); 
+} 
+
+.button:hover { 
+  color: var(--surface); 
+} 
 
 .button:focus-visible {
   outline: none;
   box-shadow: 2px 2px 0 var(--shadow-ink);
+  color: var(--surface); 
 }
 
-.button__text {
-  position: relative;
-  z-index: 1;
-  font-family: var(--accent-font), fantasy;
-  font-size: 14px;
-  line-height: 1;
+.button__text { 
+  position: relative; 
+  z-index: 1; 
+  font-family: var(--accent-font), fantasy; 
+  font-size: 14px; 
+  line-height: 1; 
+  text-transform: none;
+  mix-blend-mode: normal; 
+  color: inherit
+} 
+
+.vault-dialog__button .button__text {
   text-transform: uppercase;
-  mix-blend-mode: difference;
 }
 
 .button__icon {
   position: relative;
   z-index: 1;
   fill: currentColor;
-  mix-blend-mode: difference;
+  mix-blend-mode: normal;
 }
 
 .card__icon-button {
   inline-size: 39px;
   block-size: 36px;
   padding: 0;
+  border: none;
+  background-color: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__icon-button:focus-visible {
@@ -284,7 +309,7 @@
   padding-inline: 19px 21px;
 }
 
-.vault-dialog {
+.vault-dialog[open] {
   inline-size: var(--page-width);
   padding: 0;
   border: 2px solid var(--ink);
