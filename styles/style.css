@@ -126,12 +126,13 @@
   text-transform: uppercase;
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 1px var(--label-ink);
   text-shadow: 1px 0 0 var(--label-ink), -1px 0 0 var(--label-ink), 0 1px 0 var(--label-ink), 0 -1px 0 var(--label-ink);
 }
 
 @supports ((-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff)) {
   .memory-card__label {
+    -webkit-text-stroke: 1px var(--label-ink);
+    text-stroke: 1px var(--label-ink);
     text-shadow: none;
   }
 }
@@ -196,10 +197,11 @@
 
 .sparks {
   opacity: 0;
+  fill: var(--danger);
 }
 
 .like-icon.is-liked .sparks {
-  animation: spark-fade 0.3s 0.3s ease-in forwards;
+  animation: spark-fade 0.3s 0.3s ease-in;
 }
 
 .memory-card__controls {
@@ -241,14 +243,9 @@
   transform: translateX(0); 
 } 
 
-.button:hover { 
-  color: var(--surface); 
-} 
-
 .button:focus-visible {
   outline: none;
   box-shadow: 2px 2px 0 var(--shadow-ink);
-  color: var(--surface); 
 }
 
 .button__text { 
@@ -258,8 +255,8 @@
   font-size: 14px; 
   line-height: 1; 
   text-transform: none;
-  mix-blend-mode: normal; 
-  color: inherit
+  mix-blend-mode: difference;
+  color: white;
 } 
 
 .vault-dialog__button .button__text {
@@ -271,6 +268,8 @@
   z-index: 1;
   fill: currentColor;
   mix-blend-mode: normal;
+  mix-blend-mode: difference;
+  color: white;
 }
 
 .card__icon-button {
@@ -303,6 +302,8 @@
 }
 
 .vault-button {
+  display: flex;
+  width: 335px;
   margin-block: 50px 103px;
   margin-inline: auto;
   min-block-size: 55px;
