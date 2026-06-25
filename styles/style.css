@@ -20,7 +20,7 @@
   margin-block-start: 100px;
   display: grid;
   justify-items: center;
-  gap: 20px;
+  gap: 11px;
   padding-block: clamp(7.75rem, 7.48rem + 1.1vw, 8.5rem);
   border: 2px solid var(--ink);
   background-color: var(--surface);
@@ -138,7 +138,7 @@
 }
 
 .memory-card__text {
-  margin: 22px 25px 0;
+  margin: 27px 25px 0;
   font-size: 18px;
   line-height: 1.17;
 }
@@ -310,8 +310,23 @@
   padding-inline: 19px 21px;
 }
 
+@media (width <= 375px) {
+  .vault-button {
+    display: flex;
+    flex-direction: column;
+    width: 306px;
+    min-block-size: 84px;
+    padding-inline: 0px 0px;
+  }
+
+    .vault-button__icon {
+    inline-size: 32px;
+    block-size: 32px;
+  }
+}
+
 .vault-dialog[open] {
-  inline-size: var(--page-width);
+  width: 353px;
   padding: 0;
   border: 2px solid var(--ink);
 }
@@ -345,6 +360,12 @@
 }
 
 .vault-dialog__button {
-  min-inline-size: 257px;
+  width: 100%;
   min-block-size: 38px;
+}
+
+.vault-dialog__row svg {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
 }
